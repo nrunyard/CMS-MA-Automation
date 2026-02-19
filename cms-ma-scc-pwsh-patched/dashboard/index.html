@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CMS MA Enrollment — County/Contract (Parent Org)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Medicare Advantage Enrollment — Rolling 24 Months</h1>
+    <p class="sub">State / County / Contract (Parent Organization). Data auto‑refreshes monthly from CMS.</p>
+  </header>
+  <section class="controls">
+    <div>
+      <label for="stateSel">State</label>
+      <select id="stateSel"></select>
+    </div>
+    <div>
+      <label for="countySel">County</label>
+      <select id="countySel"></select>
+    </div>
+    <div class="wide">
+      <label for="parentSel">Parent Organization (optional)</label>
+      <select id="parentSel" multiple></select>
+      <small>Tip: Ctrl/Cmd‑click to select multiple.</small>
+    </div>
+  </section>
+  <section class="kpis" id="kpis">
+    <div class="card"><h4>Current Enrollment</h4><h2 id="kpiCur">—</h2></div>
+    <div class="card"><h4>MoM Change</h4><h2 id="kpiMoM">—</h2></div>
+    <div class="card"><h4>YoY Change</h4><h2 id="kpiYoY">—</h2></div>
+  </section>
+  <section class="charts">
+    <div id="trend" class="chart"></div>
+    <div id="topParents" class="chart"></div>
+  </section>
+  <footer>
+    <p>Source: CMS Monthly MA Enrollment by State/County/Contract (Full version) and MA Plan Directory. Updated monthly.</p>
+    <p>Dashboard reads <code>data/processed/ma_scc_latest.csv</code> and <code>data/processed/ma_scc_kpis_county.csv</code>.</p>
+  </footer>
+  <script src="dashboard.js"></script>
+</body>
+</html>

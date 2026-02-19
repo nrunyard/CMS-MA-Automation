@@ -1,0 +1,18 @@
+:root{--bg:#0b1220;--panel:#121b2e;--text:#e6edf6;--muted:#93a1b1;--brand:#7c5cff}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{padding:1.2rem 1rem;border-bottom:1px solid rgba(255,255,255,.08)}
+header h1{margin:.2rem 0 .2rem;font-size:1.4rem}
+header .sub{color:var(--muted);margin:.2rem 0}
+.controls{display:flex;gap:1rem;flex-wrap:wrap;padding:1rem}
+.controls > div{background:var(--panel);padding:.75rem;border-radius:.6rem;border:1px solid rgba(255,255,255,.1)}
+.controls label{display:block;font-weight:600;margin-bottom:.4rem}
+.controls select{min-width:220px;padding:.45rem .55rem;background:#0f1830;border:1px solid rgba(255,255,255,.15);border-radius:.4rem;color:var(--text)}
+.controls .wide{min-width:360px}
+.kpis{display:flex;gap:1rem;flex-wrap:wrap;padding:0 1rem}
+.card{background:var(--panel);padding:1rem;border-radius:.6rem;border:1px solid rgba(255,255,255,.1);min-width:220px}
+.card h2{margin:.4rem 0 0}
+.charts{display:grid;grid-template-columns:1fr;gap:1rem;padding:1rem}
+.chart{background:var(--panel);border:1px solid rgba(255,255,255,.1);border-radius:.6rem;padding:.5rem}
+footer{padding:1rem;color:var(--muted);border-top:1px solid rgba(255,255,255,.08)}
+@media(min-width:1100px){.charts{grid-template-columns:1.2fr .8fr}}
